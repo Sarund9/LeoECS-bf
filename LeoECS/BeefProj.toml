@@ -1,0 +1,6 @@
+FileVersion = 1
+
+[Project]
+Name = "LeoECS"
+TargetType = "BeefDynLib"
+StartupObject = "LeoECS.Program"
