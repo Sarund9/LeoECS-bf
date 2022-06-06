@@ -24,9 +24,45 @@ namespace System
 	// Equivalent C# Type Methods
 	extension Type
 	{
-		/*internal bool IsAssignableFrom(Type type)
+		internal bool IsAssignableFrom(Type type)
+		{
+			Runtime.Assert(false, "Not Implemented");
+
+			
+
+			return false;
+		}
+
+		internal Type GetInterface(String name)
+		{
+			String buffer = "";
+			for (let i in this.Interfaces)
+			{
+				i.GetName(buffer);
+
+				if (buffer == name)
+				{
+					return i;
+				}
+
+				buffer.Clear();
+			}
+			return null;
+		}
+
+		internal bool IsAtrDefined()
 		{
 
+			return false;
+		}
+
+		/*internal bool IsSubclassOf(Type type)
+		{
+			Runtime.Assert(false, "Not Implemented");
+
+			/*this.*/
+
+			return false;
 		}*/
 	}
 }

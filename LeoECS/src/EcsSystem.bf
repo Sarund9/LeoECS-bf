@@ -383,11 +383,11 @@ namespace Leopotam.Ecs
             for (var f in systemType.GetFields (BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance))
 			{
                 // skip statics or fields with [EcsIgnoreInject] attribute.
-                if (f.IsStatic || Attribute.IsDefined (f, ignoreType)) {
+                if (f.IsStatic || /*Attribute.IsDefined (f, ignoreType)*/ f.) {
                     continue;
                 }
                 // EcsWorld
-                if (f.FieldType.IsAssignableFrom (worldType)) {
+                if (f.FieldType.[Friend]IsAssignableFrom (worldType)) {
                     f.SetValue (system, world);
                     continue;
                 }
@@ -399,14 +399,14 @@ namespace Leopotam.Ecs
 				Runtime.Assert(f.FieldType != filterType,
 					scope $"Cant use EcsFilter type at \"{system}\" system for dependency injection, use generic version instead");
 #endif
-                if (f.FieldType.IsSubclassOf (filterType)) {
+                if (f.FieldType.IsSubtypeOf (filterType)) {
                     f.SetValue (system, world.GetFilter (f.FieldType));
                     continue;
                 }
                 // Other injections.
                 for (var pair in injections)
 				{
-                    if (f.FieldType.IsAssignableFrom (pair.key)) {
+                    if (f.FieldType.[Friend]IsAssignableFrom (pair.key)) {
                         f.SetValue (system, pair.value);
                         break;
                     }

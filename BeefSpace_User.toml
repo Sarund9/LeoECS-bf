@@ -1,12 +1,13 @@
 FileVersion = 1
 LastConfig = "Debug"
 LastPlatform = "Win64"
+RecentFilesList = ["LeoECS\\src\\EcsSystem.bf", "LeoECS\\src\\EcsHelpers.bf", "LeoECS\\src\\EcsFilter.bf", "LeoECS\\src\\EcsWorld.bf"]
 
 [MainWindow]
-X = 2
-Y = 1
-Width = 2086
-Height = 1396
+X = 89
+Y = 56
+Width = 2147
+Height = 1233
 ShowKind = "Normal"
 
 [MainDockingFrame]
@@ -39,6 +40,40 @@ RequestedHeight = 150.0
 SizePriority = 150.0
 DefaultDocumentsTabbedView = true
 Type = "TabbedView"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+Active = true
+TabLabel = "EcsSystem.bf"
+TabWidth = 100.8333
+Type = "SourceViewPanel"
+FilePath = "LeoECS\\src\\EcsSystem.bf"
+CursorPos = 15347
+VertPos = 8952.0
+ProjectName = "LeoECS"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "EcsHelpers.bf"
+TabWidth = 104.1667
+Type = "SourceViewPanel"
+FilePath = "LeoECS\\src\\EcsHelpers.bf"
+CursorPos = 1794
+ProjectName = "LeoECS"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "EcsWorld.bf"
+TabWidth = 95.83333
+Type = "SourceViewPanel"
+FilePath = "LeoECS\\src\\EcsWorld.bf"
+CursorPos = 1185
+ProjectName = "LeoECS"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "EcsFilter.bf"
+TabWidth = 88.33333
+Type = "SourceViewPanel"
+FilePath = "LeoECS\\src\\EcsFilter.bf"
+CursorPos = 58152
+ProjectName = "LeoECS"
 
 [[MainDockingFrame.DockedWidgets]]
 RequestedWidth = 275.0

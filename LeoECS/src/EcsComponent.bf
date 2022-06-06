@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------
 
 using System;
-
+using System.Reflection;
 using System.Threading;
 
 using internal Leopotam.Ecs;
@@ -57,7 +57,7 @@ namespace Leopotam.Ecs
                 throw new Exception ($"IEcsAutoReset should have <{typeof (T).Name}> constraint for component \"{typeof (T).Name}\".");
             }*/
 			Runtime.Assert(
-				!(!IsAutoReset && Type.GetInterface ("IEcsAutoReset`1") != null),
+				!(!IsAutoReset && Type.[Friend]GetInterface ("IEcsAutoReset`1") != null),
 				scope $"IEcsAutoReset should have <{typeof(T)}> constraint for component \"{typeof(T)}\".");
 #endif
         }
@@ -135,7 +135,7 @@ namespace Leopotam.Ecs
             ItemType = typeof (T);
             if (EcsComponentType<T>.IsAutoReset)
 			{
-                var autoResetMethod = typeof (T).GetMethod (nameof (IEcsAutoReset<T>.AutoReset));
+                let autoResetMethod = typeof (T).GetMethod ("AutoReset");
 #if !ECS_DISABLE_DEBUG_CHECKS
                 /*if (autoResetMethod == null) {
                     throw new Exception (
@@ -147,6 +147,9 @@ namespace Leopotam.Ecs
                     typeof (AutoResetHandler),
                     null,
                     autoResetMethod);
+
+				
+
             }
             _resizeListeners = new IEcsComponentPoolResizeListener[128];
             _reservedItemsCount = 0;

@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Reflection;
 
 using internal Leopotam.Ecs;
+using internal System;
 
 namespace Leopotam.Ecs {
     /// <summary>
@@ -63,7 +64,7 @@ namespace Leopotam.Ecs {
             FilterByIncludedComponents = new Dictionary<int, EcsGrowList<EcsFilter>> (Config.WorldFiltersCacheSize);
             FilterByExcludedComponents = new Dictionary<int, EcsGrowList<EcsFilter>> (Config.WorldFiltersCacheSize);
             ComponentPools = new IEcsComponentPool[Config.WorldComponentPoolsCacheSize];
-            _filterCtor = new Object[] { this };
+            _filterCtor = new Object[] ( this );
         }
 
         /// <summary>
@@ -471,7 +472,8 @@ namespace Leopotam.Ecs {
         /// <summary>
         /// Internal state of entity.
         /// </summary>
-        [StructLayout (LayoutKind.Sequential, Pack = 2)] // TODO: Translate This
+        /*[StructLayout (LayoutKind.Sequential, Pack = 2)] // TODO: Translate This*/
+		
         public struct EcsEntityData
 		{
             public uint16 Gen;

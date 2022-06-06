@@ -424,12 +424,12 @@ namespace Leopotam.Ecs {
             _pool1.AddResizeListener (this);
             _pool1Items = _pool1.Items;
             _get1 = _allow1 ? new int[EntitiesCacheSize] : null;
-            IncludedTypeIndices = new int[] {
+            IncludedTypeIndices = new int[] (
                 EcsComponentType<Inc1>.TypeIndex
-            };
-            IncludedTypes = new Type[] {
+            );
+            IncludedTypes = new Type[] (
                 EcsComponentType<Inc1>.Type
-            };
+            );
         }
         
         /// <summary>
@@ -509,12 +509,12 @@ namespace Leopotam.Ecs {
 
             protected this (EcsWorld world) : base (world)
 			{
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex // TODO: Investigate this Arrat Intialization
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type
-                };
+                );
             }
         }
 
@@ -525,14 +525,14 @@ namespace Leopotam.Ecs {
 
             protected this (EcsWorld world) : base (world)
 			{
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex, // TODO: Investigate this Arrat Intialization
                     EcsComponentType<Exc2>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type,
                     EcsComponentType<Exc2>.Type
-                };
+                );
             }
         }
     }
@@ -589,14 +589,14 @@ namespace Leopotam.Ecs {
             _pool2Items = _pool2.Items;
             _get1 = _allow1 ? new int[EntitiesCacheSize] : null;
             _get2 = _allow2 ? new int[EntitiesCacheSize] : null;
-            IncludedTypeIndices = new int[] {
+            IncludedTypeIndices = new int[] (
                 EcsComponentType<Inc1>.TypeIndex,
                 EcsComponentType<Inc2>.TypeIndex
-            };
-            IncludedTypes = new Type[] {
+            );
+            IncludedTypes = new Type[] (
                 EcsComponentType<Inc1>.Type,
                 EcsComponentType<Inc2>.Type
-            };
+            );
         }
         
         /// <summary>
@@ -683,12 +683,12 @@ namespace Leopotam.Ecs {
 		{
 
             protected this (EcsWorld world) : base (world) {
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type
-                };
+                );
             }
         }
 
@@ -698,14 +698,14 @@ namespace Leopotam.Ecs {
 
             protected this (EcsWorld world) : base (world)
 				{
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex,
                     EcsComponentType<Exc2>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type,
                     EcsComponentType<Exc2>.Type
-                };
+                );
             }
         }
     }
@@ -777,16 +777,16 @@ namespace Leopotam.Ecs {
             _get1 = _allow1 ? new int[EntitiesCacheSize] : null;
             _get2 = _allow2 ? new int[EntitiesCacheSize] : null;
             _get3 = _allow3 ? new int[EntitiesCacheSize] : null;
-            IncludedTypeIndices = new int[] {
+            IncludedTypeIndices = new int[] (
                 EcsComponentType<Inc1>.TypeIndex,
                 EcsComponentType<Inc2>.TypeIndex,
                 EcsComponentType<Inc3>.TypeIndex
-            };
-            IncludedTypes = new Type[] {
+            );
+            IncludedTypes = new Type[] (
                 EcsComponentType<Inc1>.Type,
                 EcsComponentType<Inc2>.Type,
                 EcsComponentType<Inc3>.Type
-            };
+            );
         }
         
         /// <summary>
@@ -886,12 +886,12 @@ namespace Leopotam.Ecs {
 
             protected this (EcsWorld world) : base (world)
 			{
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type
-                };
+                );
             }
         }
 
@@ -901,14 +901,14 @@ namespace Leopotam.Ecs {
 
             protected this (EcsWorld world) : base (world)
 			{
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex,
                     EcsComponentType<Exc2>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type,
                     EcsComponentType<Exc2>.Type
-                };
+                );
             }
         }
     }
@@ -1009,18 +1009,18 @@ namespace Leopotam.Ecs {
             _get2 = _allow2 ? new int[EntitiesCacheSize] : null;
             _get3 = _allow3 ? new int[EntitiesCacheSize] : null;
             _get4 = _allow4 ? new int[EntitiesCacheSize] : null;
-            IncludedTypeIndices = new int[] {
+            IncludedTypeIndices = new int[] (
                 EcsComponentType<Inc1>.TypeIndex,
                 EcsComponentType<Inc2>.TypeIndex,
                 EcsComponentType<Inc3>.TypeIndex,
                 EcsComponentType<Inc4>.TypeIndex
-            };
-            IncludedTypes = new Type[] {
+            );
+            IncludedTypes = new Type[] (
                 EcsComponentType<Inc1>.Type,
                 EcsComponentType<Inc2>.Type,
                 EcsComponentType<Inc3>.Type,
                 EcsComponentType<Inc4>.Type
-            };
+            );
         }
         
         /// <summary>
@@ -1128,12 +1128,12 @@ namespace Leopotam.Ecs {
             where Exc1 : struct {
 
             protected this (EcsWorld world) : base (world) {
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type
-                };
+                );
             }
         }
 
@@ -1142,14 +1142,14 @@ namespace Leopotam.Ecs {
             where Exc2 : struct {
 
             protected this (EcsWorld world) : base (world) {
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex,
                     EcsComponentType<Exc2>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type,
                     EcsComponentType<Exc2>.Type
-                };
+                );
             }
         }
     }
@@ -1261,20 +1261,20 @@ namespace Leopotam.Ecs {
             _get3 = _allow3 ? new int[EntitiesCacheSize] : null;
             _get4 = _allow4 ? new int[EntitiesCacheSize] : null;
             _get5 = _allow5 ? new int[EntitiesCacheSize] : null;
-            IncludedTypeIndices = new int[] {
+            IncludedTypeIndices = new int[] (
                 EcsComponentType<Inc1>.TypeIndex,
                 EcsComponentType<Inc2>.TypeIndex,
                 EcsComponentType<Inc3>.TypeIndex,
                 EcsComponentType<Inc4>.TypeIndex,
                 EcsComponentType<Inc5>.TypeIndex
-            };
-            IncludedTypes = new Type[] {
+            );
+            IncludedTypes = new Type[] (
                 EcsComponentType<Inc1>.Type,
                 EcsComponentType<Inc2>.Type,
                 EcsComponentType<Inc3>.Type,
                 EcsComponentType<Inc4>.Type,
                 EcsComponentType<Inc5>.Type
-            };
+            );
         }
         
         /// <summary>
@@ -1392,12 +1392,12 @@ namespace Leopotam.Ecs {
 
             protected this (EcsWorld world) : base (world)
 				{
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type
-                };
+                );
             }
         }
 
@@ -1407,14 +1407,14 @@ namespace Leopotam.Ecs {
 
             protected this (EcsWorld world) : base (world)
 				{
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex,
                     EcsComponentType<Exc2>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type,
                     EcsComponentType<Exc2>.Type
-                };
+                );
             }
         }
     }
@@ -1559,22 +1559,22 @@ namespace Leopotam.Ecs {
             _get4 = _allow4 ? new int[EntitiesCacheSize] : null;
             _get5 = _allow5 ? new int[EntitiesCacheSize] : null;
             _get6 = _allow6 ? new int[EntitiesCacheSize] : null;
-            IncludedTypeIndices = new int[] {
+            IncludedTypeIndices = new int[] (
                 EcsComponentType<Inc1>.TypeIndex,
                 EcsComponentType<Inc2>.TypeIndex,
                 EcsComponentType<Inc3>.TypeIndex,
                 EcsComponentType<Inc4>.TypeIndex,
                 EcsComponentType<Inc5>.TypeIndex,
                 EcsComponentType<Inc6>.TypeIndex
-            };
-            IncludedTypes = new Type[] {
+            );
+            IncludedTypes = new Type[] (
                 EcsComponentType<Inc1>.Type,
                 EcsComponentType<Inc2>.Type,
                 EcsComponentType<Inc3>.Type,
                 EcsComponentType<Inc4>.Type,
                 EcsComponentType<Inc5>.Type,
                 EcsComponentType<Inc6>.Type
-            };
+            );
         }
         
         /// <summary>
@@ -1706,12 +1706,12 @@ namespace Leopotam.Ecs {
 		{
 
             protected this (EcsWorld world) : base (world) {
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type
-                };
+                );
             }
         }
 
@@ -1721,14 +1721,14 @@ namespace Leopotam.Ecs {
 
             protected this (EcsWorld world) : base (world)
 				{
-                ExcludedTypeIndices = new int[] {
+                ExcludedTypeIndices = new int[] (
                     EcsComponentType<Exc1>.TypeIndex,
                     EcsComponentType<Exc2>.TypeIndex
-                };
-                ExcludedTypes = new Type[] {
+                );
+                ExcludedTypes = new Type[] (
                     EcsComponentType<Exc1>.Type,
                     EcsComponentType<Exc2>.Type
-                };
+                );
             }
         }
     }
